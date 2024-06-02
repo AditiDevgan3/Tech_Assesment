@@ -192,6 +192,7 @@ resource "aws_db_subnet_group" "main" {
 
 resource "aws_db_instance" "main" {
   db_name                = var.db_name
+  multi_az               = false
   allocated_storage      = 20
   engine                 = "mysql"
   engine_version         = "5.7"
