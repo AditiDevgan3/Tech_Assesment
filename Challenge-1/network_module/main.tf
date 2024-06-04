@@ -262,11 +262,7 @@ resource "aws_launch_template" "web" {
     arn = aws_iam_instance_profile.ssm-role.arn
   }
 
-  network_interfaces {
-    associate_public_ip_address = var.launch_template_public_ip
-  }
-
-  tag_specifications {
+   tag_specifications {
     resource_type = "instance"
     tags = {
       Name = "web-instance"
